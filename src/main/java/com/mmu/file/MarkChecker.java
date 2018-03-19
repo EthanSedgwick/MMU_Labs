@@ -14,7 +14,7 @@ public class MarkChecker implements Task{
 
         public void checkMarks() throws FileNotFoundException {
             ArrayList recordedMarks = new ArrayList<Double>();
-            Scanner fileReader = new Scanner(new FileInputStream(new File(PATH)));
+            Scanner fileReader = new Scanner(new FileInputStream(new File("put the file path here")));
 
             double total = 0;
             double average;
@@ -39,7 +39,12 @@ public class MarkChecker implements Task{
         }
 
     @Override
-    public void execute() throws FileNotFoundException {
-        checkMarks();
+    public void execute() {
+        try{
+            checkMarks();
+        }
+        catch(FileNotFoundException e){
+
+        }
     }
 }

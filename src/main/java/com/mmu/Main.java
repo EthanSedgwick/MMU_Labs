@@ -1,10 +1,13 @@
 package main.java.com.mmu;
 
+import main.java.com.mmu.arrays.Alphabet;
 import main.java.com.mmu.arrays.ArrayResizer;
 import main.java.com.mmu.arrays.HelloPlanets;
 import main.java.com.mmu.arrays.TextProcessing;
+import main.java.com.mmu.converter.TemperatureConverter;
 import main.java.com.mmu.file.MarkChecker;
 import main.java.com.mmu.looper.DeterminateLooper;
+import main.java.com.mmu.looper.IndeterminateLooper;
 
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -14,10 +17,13 @@ public class Main {
     public static void main(String[] args) throws FileNotFoundException {
 
         DeterminateLooper determinateLooper = new DeterminateLooper();
-        HelloPlanets helloPlanets = new HelloPlanets();
-        TextProcessing textProcessing = new TextProcessing();
         ArrayResizer arrayResizer = new ArrayResizer();
         MarkChecker markChecker = new MarkChecker();
+        IndeterminateLooper indeterminateLooper = new IndeterminateLooper();
+        TemperatureConverter temperatureConverter = new TemperatureConverter();
+        Alphabet alphabet = new Alphabet();
+        HelloPlanets helloPlanets = new HelloPlanets();
+        TextProcessing textProcessing = new TextProcessing(alphabet.getAlphabet());
 
         Scanner mainScanner = new Scanner(System.in);
 
@@ -25,17 +31,21 @@ public class Main {
 
         while (endLoop == false) {
 
-            System.out.println("Which lecture do you want to view? (Sorted by week number as per Moodle)");
+            System.out.println("Which lab do you want to view?");
             int intInput = mainScanner.nextInt();
 
             switch (intInput) {
-                case 1:
+                case 7:
                     determinateLooper.execute();
                     break;
-                case 2:
-                    helloPlanets.execute();
+                case 8:
+                    indeterminateLooper.execute();
                     break;
-                case 3:
+                case 9:
+                    temperatureConverter.execute();
+                    break;
+                case 11:
+                    helloPlanets.execute();
                     textProcessing.execute();
                     break;
                 case 13:
@@ -53,14 +63,14 @@ public class Main {
             System.out.println("Do you wish to view another lecture? Enter y/n");
             String stringInput = mainScanner.next();
 
-            switch (stringInput) {
+            switch (stringInput.toLowerCase()) {
                 case "y":
                     break;
                 case "n":
                     endLoop = true;
                     break;
                 default:
-                    System.out.println("You entered an invalid character. Ensure you ensure either y or n.");
+                    System.out.println("You entered an invalid character. Ensure you ensure either y or n. Terminating program.");
                     break;
             }
         }
