@@ -1,4 +1,4 @@
-package com.mmu.lectures.looper;
+package main.java.com.mmu.looper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,8 +6,6 @@ import java.util.List;
 public class IndeterminateLooper {
 
     private List<Double> listOfMarks = new ArrayList<>();
-
-    private
 
     private void addMarks(double input) {
         listOfMarks.add(input);

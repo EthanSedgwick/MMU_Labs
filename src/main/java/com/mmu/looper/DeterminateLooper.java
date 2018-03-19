@@ -1,6 +1,6 @@
-package com.mmu.lectures.looper;
+package main.java.com.mmu.looper;
 
-import com.mmu.lectures.interfaces.Task;
+import main.java.com.mmu.interfaces.Task;
 
 public class DeterminateLooper implements Task{
     private static final String SUM_OF_RESULTS_MESSAGE = "The sum of your results is: ";

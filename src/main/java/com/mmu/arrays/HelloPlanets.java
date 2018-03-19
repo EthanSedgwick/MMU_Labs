@@ -1,6 +1,6 @@
-package com.mmu.lectures.arrays;
+package main.java.com.mmu.arrays;
 
-import com.mmu.lectures.interfaces.Task;
+import main.java.com.mmu.interfaces.Task;
 
 public class HelloPlanets implements Task {
     String[] planets = new String[]{"Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Pluto"};
