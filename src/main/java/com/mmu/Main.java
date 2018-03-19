@@ -35,6 +35,10 @@ public class Main {
             int intInput = mainScanner.nextInt();
 
             switch (intInput) {
+                case 1:
+                    System.out.println("Hello world");
+                    break;
+                case 2:
                 case 7:
                     determinateLooper.execute();
                     break;
