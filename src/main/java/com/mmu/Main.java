@@ -38,7 +38,6 @@ public class Main {
                 case 1:
                     System.out.println("Hello world");
                     break;
-                case 2:
                 case 7:
                     determinateLooper.execute();
                     break;
@@ -55,6 +54,8 @@ public class Main {
                 case 13:
                     markChecker.execute();
                     break;
+                case 16:
+
                 case 17:
                     arrayResizer.execute();
                     break;
